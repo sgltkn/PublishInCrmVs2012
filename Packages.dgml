@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="PublishInCrm" Category="Project" Bounds="967.186666666667,0,90.1833333333334,25.96" Label="PublishInCrm" />
+    <Node Id="Windows7APICodePack-Core 1.1.0.0" Category="Package" Bounds="229.425,111.92,211.706666666667,25.96" Label="Windows7APICodePack-Core 1.1.0.0" />
+    <Node Id="Windows7APICodePack-Shell 1.1.0.0" Category="Package" Bounds="229.253333333333,55.9600000000002,212.05,25.96" Label="Windows7APICodePack-Shell 1.1.0.0" />
+    <Node Id="WindowsAPICodePack 1.1.0" Category="Package" Bounds="472.05,55.9600000000002,166.456666666667,25.96" Label="WindowsAPICodePack 1.1.0" />
+    <Node Id="WindowsAPICodePack-Core 1.1.1" Category="Package" Bounds="1149.195,167.88,196.166666666667,25.96" Label="WindowsAPICodePack-Core 1.1.1" />
+    <Node Id="WindowsAPICodePack-ExtendedLinguisticServices 1.1.1" Category="Package" Bounds="669.035,55.96,312.486666666667,25.96" Label="WindowsAPICodePack-ExtendedLinguisticServices 1.1.1" />
+    <Node Id="WindowsAPICodePack-Sensors 1.1.1" Category="Package" Bounds="906.235,111.92,212.086666666667,25.96" Label="WindowsAPICodePack-Sensors 1.1.1" />
+    <Node Id="WindowsAPICodePack-Shell 1.1.1" Category="Package" Bounds="1149.02333333333,111.92,196.51,25.96" Label="WindowsAPICodePack-Shell 1.1.1" />
+    <Node Id="WindowsAPICodePack-ShellExtensions 1.1.1" Category="Package" Bounds="1043.21166666667,55.96,252.133333333333,25.96" Label="WindowsAPICodePack-ShellExtensions 1.1.1" />
+  </Nodes>
+  <Links>
+    <Link Source="PublishInCrm" Target="Windows7APICodePack-Shell 1.1.0.0" Category="Installed Package" Bounds="449.195220947266,16.2555503845215,517.991424560547,39.5531349182129" />
+    <Link Source="PublishInCrm" Target="WindowsAPICodePack 1.1.0" Category="Installed Package" Bounds="647.419677734375,18.4749717712402,319.766967773438,39.0432319641113" />
+    <Link Source="PublishInCrm" Target="WindowsAPICodePack-ExtendedLinguisticServices 1.1.1" Category="Installed Package" Bounds="877.275451660156,25.8337173461914,92.0499877929688,27.5460739135742" />
+    <Link Source="PublishInCrm" Target="WindowsAPICodePack-Sensors 1.1.1" Category="Installed Package" Bounds="1012.2783203125,25.9599990844727,0,76.9599990844727" />
+    <Link Source="PublishInCrm" Target="WindowsAPICodePack-ShellExtensions 1.1.1" Category="Installed Package" Bounds="1048.69470214844,25.9599990844727,75.689697265625,26.9783096313477" />
+    <Link Source="Windows7APICodePack-Shell 1.1.0.0" Target="Windows7APICodePack-Core 1.1.0.0" Category="Package Dependency" Bounds="335.2783203125,81.9199981689453,0,21" />
+    <Link Source="WindowsAPICodePack-Sensors 1.1.1" Target="WindowsAPICodePack-Core 1.1.1" Category="Package Dependency" Bounds="1066.78686523438,137.880004882813,117.227661132813,27.9151458740234" />
+    <Link Source="WindowsAPICodePack-Shell 1.1.1" Target="WindowsAPICodePack-Core 1.1.1" Category="Package Dependency" Bounds="1247.2783203125,137.880004882813,0,21" />
+    <Link Source="WindowsAPICodePack-ShellExtensions 1.1.1" Target="WindowsAPICodePack-Shell 1.1.1" Category="Package Dependency" Bounds="1187.37048339844,81.9199981689453,34.5029296875,24.7536163330078" />
+  </Links>
+  <Categories>
+    <Category Id="Installed Package" />
+    <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
